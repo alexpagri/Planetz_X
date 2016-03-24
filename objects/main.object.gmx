@@ -53,8 +53,7 @@ oy=global.i_2_scr;
 {
 global.i_1_scr=ox;
 global.i_2_scr=oy;
-room_width=global.i_1_scr;
-room_height=global.i_2_scr;
+script_execute(stepa_init);
 }
 
 ox=display_get_width();
