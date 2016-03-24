@@ -58,4 +58,3 @@ if(os_type==0||os_type==2||os_type==3)global.type=0;
 else global.type=1;
 
 
-

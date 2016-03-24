@@ -140,8 +140,8 @@ draw_circle(i*room_width,j*room_height,10,false);
 }
 
 draw_circle(tx,ty,10,false);
-
-
+draw_circle(tx+200,ty,10,false);
+draw_circle(tx-200,ty,10,false);
 </string>
           </argument>
         </arguments>
