@@ -1,20 +1,45 @@
 <!doctype html>
 <html>
 <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+
+var bodyz = $('body');
+
+var tot_heig = document.documentElement.scrollHeight;
+var wind_heig = $(window).height();
+
+var img = new Image();
+    img.src = bodyz.css('background-image').replace(/url\(|\)$|"/ig, '');
+		
+$(window).on('scroll', function() {
+   var st = $(this).scrollTop();
+   bodyz.css({ 	'background-position' : ('0px ' + '-' + (img.height - wind_heig)*(st/(tot_heig-wind_heig+1)) + 'px') });
+   
+   
+});
+
+});
+
+</script>
+
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet" type="text/css">
 <title>Mars</title>
 </head>
 
 <body>
-	<div id="main">
+<div id="main">
     
     	<header>
         	<h2 id="PrjSol">PROJECT SOL</h2>
             <nav>
         		<ul>
             		<li><a href="http://www.nasa.gov" target="_blank">ABOUT</a></li>
-            		<li><a href="http://www.nasa.gov/mission_pages/mars/images/index.html" target="_blank">IMAGES</a></li>
+            		<li class="images"><a href="http://www.nasa.gov/mission_pages/mars/images/index.html" target="_blank">IMAGES</a></li>
             		<li><a href="http://discovermagazine.com/tags/mars" target="_blank">ARTICLES</a></li>
        			</ul>
         	</nav>
@@ -66,7 +91,8 @@
         	</div> <!-- contact -->
      	</footer>
         
-    </div> <!-- main -->
+    </div> 
+	<!-- main -->
     
 </body>
 </html>
