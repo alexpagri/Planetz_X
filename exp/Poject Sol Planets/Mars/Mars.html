@@ -4,53 +4,30 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script type="text/javascript">
-
-$(function(){
-	
-	var $window = $(window);		//Window object
-	
-	var scrollTime = 0.3;			//Scroll time
-	var scrollDistance = 150;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
-		
-	$window.on("mousewheel DOMMouseScroll", function(event){
-		
-		event.preventDefault();	
-										
-		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-		var scrollTop = $window.scrollTop();
-		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-			
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,	//For more easing functions see http://api.greensock.com/js/com/greensock/easing/package-detail.html
-				autoKill: true,
-				overwrite: 5							
-			});
-					
-	});
-	
-});
 
 
 $(window).load(function(){
 
-var bodyz = $('body');
+	var bodyz = $('body');
 
-var tot_heig = document.documentElement.scrollHeight;
-var wind_heig = $(window).height();
+	var tot_heig = document.documentElement.scrollHeight;
+	var wind_heig = $(window).height();
 
-var img = new Image();
+	var img = new Image();
     img.src = bodyz.css('background-image').replace(/url\(|\)$|"/ig, '');
-		
-$(window).on('scroll', function() {
-   var st = $(this).scrollTop();
-   bodyz.css({ 	'background-position' : ('0px ' + '-' + (img.height - wind_heig)*(st/(tot_heig-wind_heig+1)) + 'px') });
-   
-   
-});
+
+	var const1 = (img.height - wind_heig);
+	var const2 = (tot_heig-wind_heig+1);
+	var const3 = const1/const2;
+
+	var st = $(this).scrollTop();
+
+
+
+	$(window).on('scroll', function() {bodyz.css({ 	'background-position' : ('0px -' + const3*$(this).scrollTop() + 'px') });
+	
+	});
 
 });
 
