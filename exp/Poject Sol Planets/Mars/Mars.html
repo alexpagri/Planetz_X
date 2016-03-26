@@ -6,39 +6,9 @@
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet" type="text/css">
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script type="text/javascript">
-
-
-$(window).load(function(){
-
-	var bodyz = $('body');
-
-	var tot_heig = document.documentElement.scrollHeight;
-	var wind_heig = $(window).height();
-
-	var img = new Image();
-    img.src = bodyz.css('background-image').replace(/url\(|\)$|"/ig, '');
-
-	var const1 = (img.height - wind_heig);
-	var const2 = (tot_heig-wind_heig+1);
-	var const3 = const1/const2;
-
-	var st = $(this).scrollTop();
-
-
-
-	$(window).on('scroll', function(){
-	bodyz.css({ 	'background-position' : ('0px -' + const3*$(this).scrollTop() + 'px') }); 
-	});
-
-});
-
-</script>
-
-
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script type="text/javascript" src="script.js"></script>
 
 <title>Mars</title>
 </head>
