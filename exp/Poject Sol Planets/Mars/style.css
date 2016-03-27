@@ -135,6 +135,21 @@ p {
 	font-family: source-sans-pro, sans-serif;
 }
 
+#pmain {
+	display: block;
+	width: 90%;
+	margin: 0px 0px 0px 50px;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	color: #333333;
+	letter-spacing: .01em;
+	font-style: normal;
+	font-weight: 300;
+	font-family: source-sans-pro, sans-serif;
+}
+
 /* Section 2 */
 
 #content2 {
@@ -186,7 +201,7 @@ p {
 #morebutton {
 	width: 200px;
 	border: 2px solid #333;
-	color:#333;
+	color:#FF7536;
 	background-color: #e6e6e6;
 	padding: 10px;
 	text-align: center;
@@ -202,8 +217,9 @@ p {
 }
 
 #morebutton:hover {
+	border:2px solid #FF7536;
 	color: #eee;
-	background-color: #333;
+	background-color: #FF7536;
 }
 
 #more {
@@ -291,4 +307,5 @@ button:hover {
 	background: #DADADA;
 	border: 1px #DADADA;
 	color: #C43C3E;
+}.pmain {
 }
