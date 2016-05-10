@@ -1,26 +1,23 @@
 @charset "UTF-8";
 
-
-
 * {
 	margin:0;
 	padding:0; 
 }
 
-
 body {
 	/*background-color:#e6e6e6;*/
 	/*background-image:url(Images/Background-1920x1440.jpg);*/
-	background-image:url(Images/alex4.jpg);
+	/*background-image:url(Images/alex4.jpg);*/
+	background-image:url(Images/Neptune%20Image.jpg);
 	background-repeat:no-repeat;
 	background-position:0px 0px;
 	background-attachment:fixed;
     max-width: 100%;
-	margin-bottom: 100px;
+	margin-bottom: 130px;
 	margin-top: 100px;
 }
 	
-
 #main {
 	max-width: 1020px;
 	margin: 0 auto;
@@ -91,6 +88,11 @@ a {
 }
 
 a:hover {
+	text-decoration:none;
+	color: #C43C3E;
+}
+
+#PrjSol:hover {
 	text-decoration:none;
 	color: #C43C3E;
 }
@@ -201,7 +203,7 @@ p {
 #morebutton {
 	width: 200px;
 	border: 2px solid #333;
-	color:#FF7536;
+	color:#589DA6;
 	background-color: #e6e6e6;
 	padding: 10px;
 	text-align: center;
@@ -217,9 +219,9 @@ p {
 }
 
 #morebutton:hover {
-	border:2px solid #FF7536;
+	border:2px solid #589DA6;
 	color: #eee;
-	background-color: #FF7536;
+	background-color: #589DA6;
 }
 
 #more {
@@ -273,8 +275,21 @@ footer {
 	margin: 0 0 0 50px;
 }
 
+#subscribeFooter {
+	float: right;
+	width: 33%;
+}
+
+#subscribe {
+	margin: 50px 0 30px 0;
+}
+
 *:focus {
 	outline: none;
+}
+
+.newsletter {
+	display: block;
 }
 
 input, button {
@@ -298,7 +313,7 @@ button {
 	background: #eeeeee;
 	text-align: center;
 	color: #333333;
-	width: 60px;
+	width: 70px;
 	height: 60px;
 	transition: background, color, .5s ease 0;
 }
@@ -307,5 +322,4 @@ button:hover {
 	background: #DADADA;
 	border: 1px #DADADA;
 	color: #C43C3E;
-}.pmain {
 }
